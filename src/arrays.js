@@ -43,13 +43,29 @@ function extend(originalArray, additionalItems) {
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) {}
+function itemsWithLength(items, length) {
+  let newArr = [];
+  for(let each in items){
+    if(items[each].length == length){
+      newArr.push(items[each]);
+    }
+  }
+  return newArr;
+}
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) {}
+// function everyOtherItem(items) {
+//   let newItems = [];
+//   for(let each in items){
+//     if(each % 2 == 0){
+//       newItems.push(items[new])
+//     }
+//   }
+//   return newItems;
+// }
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
